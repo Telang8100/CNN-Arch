@@ -77,7 +77,7 @@ ds = tf.data.Dataset.from_tensor_slices((all_image_paths, all_image_labels))#Giv
 
 
 
-BATCH_SIZE = 2
+BATCH_SIZE = 2 #Change according to Your data and system 
 
 
 image_label_ds = ds.map(load_and_preprocess_from_path_label)
