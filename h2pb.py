@@ -13,7 +13,7 @@ K.set_learning_phase(0)
 
 
 
-model = load_model('D:/BV_classification/BV_classification_back_033.hdf5')
+model = load_model('Path/To/HDF5/File')
 print(model.outputs)
 # [<tf.Tensor 'dense_2/Softmax:0' shape=(?, 10) dtype=float32>]
 print(model.inputs)
@@ -59,4 +59,4 @@ frozen_graph = freeze_session(K.get_session(),
 
 
 # Save to ./model/tf_model.pb
-tf.io.write_graph(frozen_graph, "D:/BV_classification/model/", "BV_classification_back_033.pb", as_text=False)
+tf.io.write_graph(frozen_graph, "Path/To/Save/PB/File/", "File_Name.pb", as_text=False)
