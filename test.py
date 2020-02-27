@@ -9,28 +9,18 @@ from PIL import Image
 import scipy.misc #Version should be 1.1.0
 #import configparser
 #import pandas as pd
-PATH='D:/Bve1-Toric-15-07-2019/Val/'
-#classes =['Good Lens','@Bubble','Underdose','Fatal(water)','Fatal(PVA)','Inclusion_Surface-Imperfection','Debris On Optics']
-#classes = ['Good Lens', 'Water on Edge', 'Wet Edge', 'Dry Edge', 'Collapsed Lens', 'Folded Lens', 'No Lens', 'Damaged Tip', 'Lens out of FOV', 'Multiple Lens', 'Gapped Edge', 'Inner Tear', 'Outer Tear', 'Dry PVA on Optics', 'Lens Particle', 'Split Edge', 'Blurred Edge']
-classes =['@Bubble', 'Debris on Mold', 'Fatal(PVA)',
-          'Fatal(Water)','Ink Smear', 'Ink spill', 'Inner Print',
-          'Mold Scratch', 'OK Print', 'Underdose']
-model_file ="D:/model/saved_model.pb"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/@Bubble/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Debris on Mold/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Fatal(PVA)/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Fatal(Water)/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Good Lens/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Ink Smear/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Ink spill/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Inner Print/"
-path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Mold Scratch/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/OK Print/"
-#path_test_images ="D:/Bve1-Toric-15-07-2019/Val/Underdose/"
+PATH='Path/To/Test/Data'
+classes =['A','B',...]
+model_file ="Path/To/pb/file"
+path_test_images ="Path/to/A/class"
+#path_test_images ="Path/to/B/class"
+#path_test_images ="Path/to/C/class"
+
+
 
 #thresholds =  np.array([0.1, 0.1, 0.4, 0.1, 0.1, 0.1])
-thresholds = np.array([0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1])
-[width, height] = [299, 299]
+thresholds = np.array([0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1])#How many classes that number of thresholds
+[width, height] = [299, 299] #Image Size What is there while training
 #s=.003921568
 s = 0.00392157
 m = 108.4112530
